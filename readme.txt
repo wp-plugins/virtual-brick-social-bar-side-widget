@@ -18,20 +18,23 @@ a Social Bar with Your favorite Social Share Buttons
 
 == Installation ==
 
-Activate the plugin, go to widgets page and add the widget to the desired location
+Activate the plugin, go to widgets page and add the widget to the desired location on the Sidebar
 
 
 == Frequently Asked Questions ==
 
-= Do I Also Have Pinterest Button =
-
-Yes You Do!
+= How to Configure my SocialBar ? =
+Go to Admin -> Widgets, Select the Social Bar Widget and Expand 
+Here you can select the title you want and enable or disable buttons
 
 == Screenshots ==
 1. Front End Screenshot
 2. Front End Screenshot on a different template
 
 == Changelog ==
+
+= 1.2.0 =
+* Button Selection - Select Only The Buttons You Want  
 
 = 1.1.0 =
 * Layout Changes
