@@ -3,7 +3,7 @@
 Plugin Name: Virtual Brick Social Bar Side Widget
 Plugin URI: http://www.virtual-brick.com/?ref=socialBar
 Description: a Social Bar with Your favorite Social Share Buttons 
-Version: 1.1.0
+Version: 1.2.0
 Author: Roy Toledo
 Author URI: http://www.virtual-brick.com/?ref=socialBar
 License: GPL
@@ -11,63 +11,65 @@ License: GPL
 
 add_action( 'widgets_init', 'vb_social_bar_widget_register_widget' );
 function vb_social_bar_widget_register_widget() { register_widget( 'SocialBarWidget' ); }
-//add_action( 'widgets_init', create_function('', 'return register_widget("SocialBarWidget");') );
 
-/**
- * @todo add button selection on admin side
- **/
+
 class SocialBarWidget extends WP_Widget 
 {
 
-	function __construct() 
+	public function __construct() 
 	{
 		parent::__construct(
 			'vb-social_bar_widget',
 			__( 'Social Bar Widget' ),
 			array( 'description' => __( 'Social Bar Sidebar Widget' ) )
 		);
-
-		/* Add CSS
-		if ( is_active_widget( false, false, $this->id_base ) ) {
-			add_action( 'wp_head', array( $this, 'css' ) );
-		}
-		*/
 	}
 
-	function css() 
-	{ 
-	//THis is th WIdg
-?>
-
-<style type="text/css">
-
-</style>
-
-<?php
-	}
-
-	function form( $instance ) 
+	public function form( $instance ) 
 	{
-		if ($instance){
-			$title = esc_attr( $instance['title'] );
-		}else{
-			$title = __( 'Contact Us' );
+		//Widget Form Fields
+		$form_options['widget_fields']['title'] = array('label'=>'Title:', 'type'=>'text', 'default'=>__( 'Share This!' ));
+		$form_options['widget_fields']['show-facebook'] = array('label'	=>'Facebook Like', 'type'=>'checkbox', 'default'=>true);
+		$form_options['widget_fields']['show-google'] = array('label'	=>'Google +1', 'type'=>'checkbox', 'default'=>true);
+		$form_options['widget_fields']['show-twitter'] = array('label'	=>'Twitter', 'type'=>'checkbox', 'default'=>true);
+		$form_options['widget_fields']['show-pinterest'] = array('label'=>'Pinterest', 'type'=>'checkbox', 'default'=>false);
+
+		//Load Defaults
+		if (!$instance){
+			foreach($form_options['widget_fields'] as $key => $field) {
+				$instance[$key] = esc_attr($field['default']);
+			}
 		}
-		?>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
-		</p>
-		<?php 
+		
+		//Print Fields
+		foreach($form_options['widget_fields'] as $key => $field) {
+			$field_name = sprintf('%s_%s_%s', $form_options['prefix'], $key, $number);
+			$field_checked = '';
+			if ($field['type'] == 'text') {
+				$field_value = htmlspecialchars($instance[$key], ENT_QUOTES);
+			}elseif ($field['type'] == 'checkbox'){
+				$field_value = 1;
+				if (! empty($instance[$key])) {
+					$field_checked = 'checked="checked"';
+				}
+			}
+			?>
+			<p style="text-align:right;" class="vb-social_bar_field">
+				<label for="<?php echo $this->get_field_id( $key ); ?>"><?php _e( $field['label'] ); ?></label> 
+				<input class="" id="<?php echo $this->get_field_id( $key ); ?>" name="<?php echo $this->get_field_name( $key ); ?>" type="<?php echo $field['type']?>" value="<?php echo $field_value ?>" <?php echo $field_checked?>/>
+			</p>
+			<?
+		}
 	}
 
-	function update( $new_instance, $old_instance ) 
+	public function update( $new_instance, $old_instance ) 
 	{
+		$instance= $new_instance;
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		return $instance;
 	}
 
-	function widget( $args, $instance ) 
+	public function widget( $args, $instance ) 
 	{
 		echo $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
@@ -75,7 +77,6 @@ class SocialBarWidget extends WP_Widget
 			echo esc_html( $instance['title'] );
 			echo $args['after_title'];
 		}
-		include 'fb_head.inc';
 		include 'bar.inc';
 		echo $args['after_widget'];
 	}
