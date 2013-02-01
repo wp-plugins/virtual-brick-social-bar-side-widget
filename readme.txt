@@ -11,7 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 a Social Bar with Your favorite Social Share Buttons 
 
-* Facebook, Twitter, Google +1 and Pinterest Button
+* Facebook Like + Share
+* Twitter
+* Google +1 
+* Pinterest
 
 == Installation ==
 
@@ -20,9 +23,9 @@ Activate the plugin, go to widgets page and add the widget to the desired locati
 
 == Frequently Asked Questions ==
 
-= What about foo bar? =
+= Do I Also Have Pinterest Button =
 
-Answer to foo bar dilemma.
+Yes You Do!
 
 == Screenshots ==
 1. Front End Screenshot
