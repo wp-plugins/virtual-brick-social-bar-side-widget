@@ -22,39 +22,6 @@ class SocialBarWidget extends WP_Widget
 			__( 'Social Bar Widget' ),
 			array( 'description' => __( 'Social Bar Sidebar Widget' ) )
 		);
-
-		/* Add CSS
-		if ( is_active_widget( false, false, $this->id_base ) ) {
-			add_action( 'wp_head', array( $this, 'css' ) );
-		}
-		*/
-	}
-
-	function css() 
-	{ 
-	//THis is th WIdg
-?>
-
-<style type="text/css">
-
-</style>
-
-<?php
-	}
-
-	function form( $instance ) 
-	{
-		if ($instance){
-			$title = esc_attr( $instance['title'] );
-		}else{
-			$title = __( 'Contact Us' );
-		}
-		?>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
-		</p>
-		<?php 
 	}
 
 	function update( $new_instance, $old_instance ) 
