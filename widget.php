@@ -27,6 +27,11 @@ class SocialBarWidget extends WP_Widget
 
 	public function form( $instance ) 
 	{
+		?>
+		<style type="text/css">
+			.vb-social_bar_field input[type="checkbox"] { float: left; margin: 0 10px 0 0;}
+		</style>
+		<?php
 		//Widget Form Fields
 		$form_options['widget_fields']['title'] = array('label'=>'Title:', 'type'=>'text', 'default'=>__( 'Share This!' ));
 		$form_options['widget_fields']['show-facebook'] = array('label'	=>'Facebook Like', 'type'=>'checkbox', 'default'=>true);
@@ -54,7 +59,7 @@ class SocialBarWidget extends WP_Widget
 				}
 			}
 			?>
-			<p style="text-align:right;" class="vb-social_bar_field">
+			<p class="vb-social_bar_field">
 				<label for="<?php echo $this->get_field_id( $key ); ?>"><?php _e( $field['label'] ); ?></label> 
 				<input class="" id="<?php echo $this->get_field_id( $key ); ?>" name="<?php echo $this->get_field_name( $key ); ?>" type="<?php echo $field['type']?>" value="<?php echo $field_value ?>" <?php echo $field_checked?>/>
 			</p>
