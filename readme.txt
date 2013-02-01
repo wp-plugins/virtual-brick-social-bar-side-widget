@@ -1,4 +1,4 @@
-=== VB Social Share ===
+=== VB Social Share Widget ===
 Contributors: toledoroy
 Tags: facebook, twitter, google +1, pinterest, social, share, like
 Requires at least: 3.0
@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-a Social Bar with Your favorite Social Share Buttons 
+A Social Bar with Your Favorite Social Share Buttons 
 
 * Facebook Like + Share
 * Twitter
