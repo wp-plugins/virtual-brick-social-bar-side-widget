@@ -16,6 +16,7 @@ A Social Bar with Your Favorite Social Share Buttons
 * Google +1 
 * Pinterest
 
+
 == Installation ==
 
 Activate the plugin, go to widgets page and add the widget to the desired location on the Sidebar
@@ -26,6 +27,11 @@ Activate the plugin, go to widgets page and add the widget to the desired locati
 = How to Configure my SocialBar ? =
 Go to Admin -> Widgets, Select the Social Bar Widget and Expand 
 Here you can select the title you want and enable or disable buttons
+
+= Why is Facebook Button not Showing ? =
+For facebook buttons to work you must have a facebook Open Graph support on your website
+if you still don't you can search for a facebook open graph plugin
+
 
 == Screenshots ==
 1. Front End Screenshot
