@@ -36,4 +36,7 @@ Yes You Do!
 = 1.1.0 =
 * Layout Changes
 
+= 1.0.0 =
+* First Stable Version
+
 == Upgrade Notice ==
