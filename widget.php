@@ -30,6 +30,21 @@ class SocialBarWidget extends WP_Widget
 		return $instance;
 	}
 
+	function form( $instance ) 
+	{
+		if ($instance){
+			$title = esc_attr( $instance['title'] );
+		}else{
+			$title = __( 'Contact Us' );
+		}
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+		</p>
+		<?php 
+	}
+
 	function widget( $args, $instance ) 
 	{
 		echo $args['before_widget'];
@@ -38,7 +53,6 @@ class SocialBarWidget extends WP_Widget
 			echo esc_html( $instance['title'] );
 			echo $args['after_title'];
 		}
-		include 'fb_head.inc';
 		include 'bar.inc';
 		echo $args['after_widget'];
 	}
