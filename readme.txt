@@ -33,6 +33,9 @@ Here you can select the title you want and enable or disable buttons
 
 == Changelog ==
 
+= 1.2.1 =
+* Admin Design Changes Only
+
 = 1.2.0 =
 * Button Selection - Select Only The Buttons You Want  
 

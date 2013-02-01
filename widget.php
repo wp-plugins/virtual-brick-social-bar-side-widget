@@ -3,7 +3,7 @@
 Plugin Name: Virtual Brick Social Bar Side Widget
 Plugin URI: http://www.virtual-brick.com/?ref=socialBar
 Description: a Social Bar with Your favorite Social Share Buttons 
-Version: 1.2.0
+Version: 1.2.1
 Author: Roy Toledo
 Author URI: http://www.virtual-brick.com/?ref=socialBar
 License: GPL
