@@ -1,6 +1,6 @@
 <!-- VB Social Bar -->
-<div id="socialblock" style="overflow:hidden;">						
-
+<div id="socialblock" style="overflow:hidden;">
+	<?php if($instance['facebook-init']){ include('facebook-init.inc'); } ?>
 	<?php if($instance['show-facebook']){?>
 	<div id="fbLikeButton" style="float:left; width:49px; overflow:hidden; margin:5px;">
 		<fb:like href="<?php the_permalink() ?>" send="true" width="450" show_faces="false"></fb:like>

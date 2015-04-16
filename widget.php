@@ -3,7 +3,7 @@
 Plugin Name: Virtual Brick Social Bar Side Widget
 Plugin URI: http://www.virtual-brick.com/?ref=socialBar
 Description: a Social Bar with Your favorite Social Share Buttons 
-Version: 1.2.1
+Version: 2.0.0
 Author: Roy Toledo
 Author URI: http://www.virtual-brick.com/?ref=socialBar
 License: GPL
@@ -38,7 +38,8 @@ class SocialBarWidget extends WP_Widget
 		$form_options['widget_fields']['show-google'] = array('label'	=>'Google +1', 'type'=>'checkbox', 'default'=>true);
 		$form_options['widget_fields']['show-twitter'] = array('label'	=>'Twitter', 'type'=>'checkbox', 'default'=>true);
 		$form_options['widget_fields']['show-pinterest'] = array('label'=>'Pinterest', 'type'=>'checkbox', 'default'=>false);
-
+		$form_options['widget_fields']['facebook-init'] = array('label'	=>'Facebook Init (Check if Facebook button not showing)', 'type'=>'checkbox', 'default'=>false);
+		
 		//Load Defaults
 		if (!$instance){
 			foreach($form_options['widget_fields'] as $key => $field) {
