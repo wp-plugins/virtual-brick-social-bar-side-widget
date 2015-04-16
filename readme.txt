@@ -3,13 +3,13 @@ Contributors: toledoroy
 Tags: facebook, twitter, google +1, pinterest, social, share, like
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A Social Bar with Your Favorite Social Share Buttons 
+Easy To Use Social Bar with Your Favorite Social Share Buttons 
 
 * Facebook Like + Share
 * Twitter
@@ -19,7 +19,9 @@ A Social Bar with Your Favorite Social Share Buttons
 
 == Installation ==
 
-Activate the plugin, go to widgets page and add the widget to the desired location on the Sidebar
+Activate the plugin, go to widgets page and add the widget to the desired location on the Sidebar.
+
+* Note that to display the Facebook Like button a facebook initiation is required, more info on FAQ Page 
 
 
 == Frequently Asked Questions ==
@@ -38,6 +40,9 @@ if you still don't you can search for a facebook open graph plugin
 2. Front End Screenshot on a different template
 
 == Changelog ==
+
+= 1.2.2 =
+* Updated Info
 
 = 1.2.1 =
 * Admin Design Changes Only
