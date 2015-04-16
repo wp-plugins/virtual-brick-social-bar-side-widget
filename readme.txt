@@ -1,0 +1,59 @@
+=== VB Social Share Widget ===
+Contributors: toledoroy
+Tags: facebook, twitter, google +1, pinterest, social, share, like
+Requires at least: 3.0
+Tested up to: 4.1
+Stable tag: 1.2.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+== Description ==
+
+Easy To Use Social Bar with Your Favorite Social Share Buttons 
+
+* Facebook Like + Share
+* Twitter
+* Google +1 
+* Pinterest
+
+
+== Installation ==
+
+Activate the plugin, go to widgets page and add the widget to the desired location on the Sidebar.
+
+* Note that to display the Facebook Like button a facebook initiation is required, more info on FAQ Page 
+
+
+== Frequently Asked Questions ==
+
+= How to Configure my SocialBar ? =
+Go to Admin -> Widgets, Select the Social Bar Widget and Expand 
+Here you can select the title you want and enable or disable buttons
+
+= Why is Facebook Button not Showing ? =
+For facebook buttons to work you must have a facebook Open Graph support on your website
+if you still don't you can search for a facebook open graph plugin
+
+
+== Screenshots ==
+1. Front End Screenshot
+2. Front End Screenshot on a different template
+
+== Changelog ==
+
+= 1.2.2 =
+* Updated Info
+
+= 1.2.1 =
+* Admin Design Changes Only
+
+= 1.2.0 =
+* Button Selection - Select Only The Buttons You Want  
+
+= 1.1.0 =
+* Layout Changes
+
+= 1.0.0 =
+* First Stable Version
+
+== Upgrade Notice ==
