@@ -1,6 +1,7 @@
 === VB Social Share Widget ===
 Contributors: toledoroy
 Tags: facebook, twitter, google +1, pinterest, social, share, like
+Donate link: http://www.virtual-brick.com/project/social-bar-widget/
 Requires at least: 3.0
 Tested up to: 4.1
 Stable tag: 2.0.0
